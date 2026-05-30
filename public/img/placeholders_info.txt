@@ -1,0 +1,7 @@
+Pasta criada para você colocar as suas imagens do site!
+
+Como usar no código React / HTML:
+Se você colocar uma imagem chamada "crianca.jpg" nesta pasta, você pode usá-la no código assim:
+<img src="/img/crianca.jpg" alt="Descrição" />
+
+Sinta-se à vontade para substituir as imagens de exemplo (como as do Lorem Picsum) pelos caminhos locais dela (ex: "/img/sua-imagem.jpg").
