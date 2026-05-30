@@ -58,44 +58,35 @@ export default function App() {
     <div className="min-h-screen selection:bg-primary-light selection:text-primary">
       <Navbar />
       
-      <main className="pt-24 pb-12 px-6 max-w-7xl mx-auto">
-        {/* Geometric Grid Layout for Desktop */}
-        <div className="grid lg:grid-cols-3 lg:grid-rows-[auto_1fr] gap-6">
-          
-          {/* Main Hero Column */}
-          <div className="lg:col-span-1 lg:row-span-2">
-            <Hero />
+      <main className="pb-16 flex flex-col gap-16 md:gap-24">
+        {/* Main Hero Section */}
+        <Hero />
+
+        {/* Sobre o TEA Section */}
+        <section id="sobre-tea" className="max-w-4xl mx-auto w-full px-6">
+          <div className="title-row px-5 pt-5 bg-white rounded-t-[20px] border-x border-t border-primary-accent mb-0">
+            <h2>Sobre o TEA</h2>
           </div>
+          <Carousel items={teaCarouselItems} />
+        </section>
 
-          {/* Secondary Column: Sliders & App */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
-            <section id="sobre-tea">
-              <div className="title-row px-5 pt-5 bg-white rounded-t-[20px] border-x border-t border-primary-accent mb-0">
-                <h2>Sobre o TEA</h2>
-              </div>
-              <Carousel items={teaCarouselItems} />
-            </section>
+        {/* Nosso Aplicativo Section */}
+        <section id="app" className="w-full">
+          <AppSection />
+        </section>
 
-            <section id="app">
-              <AppSection />
-            </section>
+        {/* O Projeto Section */}
+        <section id="sobre-projeto" className="max-w-4xl mx-auto w-full px-6">
+          <div className="title-row px-5 pt-5 bg-white rounded-t-[20px] border-x border-t border-primary-accent mb-0">
+            <h2>O Projeto</h2>
           </div>
+          <Carousel items={projetoCarouselItems} />
+        </section>
 
-          {/* Tertiary Column: FAQ & Proyecto */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
-            <section id="duvidas">
-              <FAQ />
-            </section>
-
-            <section id="sobre-projeto">
-              <div className="title-row px-5 pt-5 bg-white rounded-t-[20px] border-x border-t border-primary-accent mb-0">
-                <h2>O Projeto</h2>
-              </div>
-              <Carousel items={projetoCarouselItems} />
-            </section>
-          </div>
-
-        </div>
+        {/* Dúvidas Frequentes (FAQ) Section */}
+        <section id="duvidas" className="w-full">
+          <FAQ />
+        </section>
       </main>
 
       <Contact />
